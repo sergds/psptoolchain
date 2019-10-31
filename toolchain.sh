@@ -35,6 +35,6 @@
  else
 
   ## Run the all build scripts.
-  for SCRIPT in ${BUILD_SCRIPTS[@]}; do "$SCRIPT" || { echo "$SCRIPT: Failed."; exit 1; } done
+  for SCRIPT in ${BUILD_SCRIPTS[@]}; do echo "Running $SCRIPT" && "$SCRIPT" &>/dev/null || { echo "$SCRIPT: Failed."; exit 1; } done
 
  fi
