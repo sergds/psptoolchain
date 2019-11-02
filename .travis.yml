@@ -1,5 +1,6 @@
 language: c
 os: osx
+compiler: gcc
 before_script:
 - git clone https://github.com/sergds/psptoolchain.git
 - cd psptoolchain
