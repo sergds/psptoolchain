@@ -30,11 +30,11 @@
  if [ $1 ]; then
 
   ## Run the requested build scripts.
-  for STEP in $@; do "${BUILD_SCRIPTS[$STEP-1]}" || { echo "${BUILD_SCRIPTS[$STEP-1]}: Failed."; exit 1; } done
+  for STEP in $@; do echo "Running ${BUILD_SCRIPTS[$STEP-1]} ..." && ${BUILD_SCRIPTS[$STEP-1]}  >/dev/null || { echo "${BUILD_SCRIPTS[$STEP-1]}: Failed."; exit 1; } done
 
  else
 
   ## Run the all build scripts.
-  for SCRIPT in ${BUILD_SCRIPTS[@]}; do echo "Running $SCRIPT" && "$SCRIPT" &>/dev/null || { echo "$SCRIPT: Failed."; exit 1; } done
+  for SCRIPT in ${BUILD_SCRIPTS[@]}; do echo "Running $SCRIPT ..." && "$SCRIPT" >/dev/null || { echo "$SCRIPT: Failed."; exit 1; } done
 
  fi
