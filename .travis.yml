@@ -5,6 +5,7 @@ compiler: gcc
 env:
 - MATRIX_EVAL="CC=gcc-4.9 && CXX=g++-4.9"
 before_script:
+- eval "${MATRIX_EVAL}"
 - git clone https://github.com/sergds/psptoolchain.git
 - cd psptoolchain
 - ./prepare-mac-os.sh
