@@ -4,4 +4,5 @@ before_script:
 - git clone https://github.com/sergds/psptoolchain.git
 - cd psptoolchain
 - sudo ./prepare-mac-os.sh
+- brew install sdl
 script: "./toolchain-local.sh"
