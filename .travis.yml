@@ -5,4 +5,4 @@ before_script:
 - cd psptoolchain
 - ./prepare-mac-os.sh
 - brew install sdl doxygen
-script: "./toolchain-local.sh"
+script: "travis_wait ./toolchain-local.sh"
