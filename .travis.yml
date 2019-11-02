@@ -3,6 +3,6 @@ os: osx
 before_script:
 - git clone https://github.com/sergds/psptoolchain.git
 - cd psptoolchain
-- sudo ./prepare-mac-os.sh
-- brew install sdl
+- ./prepare-mac-os.sh
+- brew install sdl doxygen
 script: "./toolchain-local.sh"
