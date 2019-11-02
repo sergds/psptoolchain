@@ -1,0 +1,7 @@
+language: c
+os: linux
+before_script:
+- git clone https://github.com/sergds/psptoolchain.git
+- cd psptoolchain
+- sudo ./prepare-debian-ubuntu.sh
+script: "./toolchain-local.sh"
