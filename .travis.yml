@@ -1,7 +1,7 @@
 language: c
-os: linux
+os: osx
 before_script:
 - git clone https://github.com/sergds/psptoolchain.git
 - cd psptoolchain
-- sudo ./prepare-debian-ubuntu.sh
+- sudo ./prepare-mac-os.sh
 script: "./toolchain-local.sh"
