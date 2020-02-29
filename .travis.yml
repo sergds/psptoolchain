@@ -9,5 +9,5 @@ before_script:
 - git clone https://github.com/sergds/psptoolchain.git
 - cd psptoolchain
 - ./prepare-debian-ubuntu.sh
-- sudo apt-get install libsdl-dev doxygen libusb-dev libusb-1.0-0 texinfo automake
+- sudo apt-get install libsdl-dev doxygen libusb-dev libusb-1.0-0 texinfo automake libtool libtool-bin
 script: "travis_wait ./toolchain-local.sh"
